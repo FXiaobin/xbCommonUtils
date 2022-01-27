@@ -18,7 +18,7 @@ Pod::Spec.new do |spec|
   spec.swift_version = "5.0"
 
   spec.name         = "xbCommonUtils"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "xbCommonUtils."
 
   # This description is used to generate tags and improve search results.
@@ -93,7 +93,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "xbCommonUtils", "xbCommonUtils/**/*.{h,m}"
+  spec.source_files  = "xbCommonUtils", "xbCommonUtils/*.{swift}"
   spec.exclude_files = "xbCommonUtils/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
