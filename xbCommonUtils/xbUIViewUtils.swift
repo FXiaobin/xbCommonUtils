@@ -7,7 +7,7 @@
 
 import UIKit
 
-class xbUIViewUtils: NSObject {
+public class xbUIViewUtils: NSObject {
 
     /** 创建label font*/
     class func createLabelWith(frame: CGRect, text: String?, textColor: UIColor, textAlignment: NSTextAlignment,font: UIFont!, numberOfLines: Int) -> UILabel{
