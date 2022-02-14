@@ -3,9 +3,9 @@ Pod::Spec.new do |spec|
 
   
   spec.name         = "xbCommonUtils"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   spec.summary      = "xbCommonUtils."
-  spec.description  = <<-DESC 常用宏定义，UIView快速创建 DESC
+  spec.description  = "常用宏定义，UIView快速创建"
   
   spec.requires_arc = true
   spec.license      = "MIT"
