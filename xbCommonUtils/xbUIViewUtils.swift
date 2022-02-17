@@ -10,7 +10,7 @@ import UIKit
 public class xbUIViewUtils: NSObject {
 
     /** 创建label font*/
-    class func createLabelWith(frame: CGRect, text: String?, textColor: UIColor, textAlignment: NSTextAlignment,font: UIFont!, numberOfLines: Int) -> UILabel{
+    public class func createLabelWith(frame: CGRect, text: String?, textColor: UIColor?, textAlignment: NSTextAlignment,font: UIFont!, numberOfLines: Int = 1) -> UILabel{
         
         let label = UILabel.init(frame: frame)
         label.text = text
@@ -26,26 +26,26 @@ public class xbUIViewUtils: NSObject {
     
     
     /** 创建按钮 文字+图片+normal*/
-    class func createButtonWith(frame: CGRect, title: String?, titleColor: UIColor?, imageName: String?, font: UIFont!, target: Any?, action: Selector? ,tag: Int = 0) -> UIButton{
+    public class func createButtonWith(frame: CGRect, title: String?, titleColor: UIColor?, imageName: String?, font: UIFont!, target: Any?, action: Selector? ,tag: Int = 0) -> UIButton{
 
         return createButtonWith(frame: frame, title: title, titleColor: titleColor, titleSelected: title, titleColorSelected: titleColor, imageName: imageName, imageNameSelected: imageName, font: font, target: target, action: action, tag: tag)
         
     }
     
     /** 创建按钮 仅文字*/
-    class func createButtonWith(frame: CGRect, title: String?, titleColor: UIColor?, titleSelected: String?, titleColorSelected: UIColor?, font: UIFont!, target: Any?, action: Selector? ,tag: Int = 0) -> UIButton{
+    public class func createButtonWith(frame: CGRect, title: String?, titleColor: UIColor?, titleSelected: String?, titleColorSelected: UIColor?, font: UIFont!, target: Any?, action: Selector? ,tag: Int = 0) -> UIButton{
         
         return createButtonWith(frame: frame, title: title, titleColor: titleColor, titleSelected: titleSelected, titleColorSelected: titleColorSelected, imageName: nil, imageNameSelected: nil, font: font, target: target, action: action, tag: tag)
     }
     
     /** 创建按钮 仅图片*/
-    class func createButtonWith(frame: CGRect, imageName: String?, imageNameSelected: String?, target: Any?, action: Selector? ,tag: Int = 0) -> UIButton{
+    public class func createButtonWith(frame: CGRect, imageName: String?, imageNameSelected: String?, target: Any?, action: Selector? ,tag: Int = 0) -> UIButton{
 
         return createButtonWith(frame: frame, title: "", titleColor: UIColor.black, titleSelected: "", titleColorSelected: UIColor.black, imageName: imageName, imageNameSelected: imageNameSelected, font: UIFont.systemFont(ofSize: 15.0), target: target, action: action, tag: tag)
     }
     
     /** 创建按钮 文字+图片*/
-    class func createButtonWith(frame: CGRect, title: String?, titleColor: UIColor?, titleSelected: String?,titleColorSelected: UIColor?, imageName: String?, imageNameSelected: String?, font: UIFont!, target: Any?, action: Selector? ,tag: Int = 0) -> UIButton{
+    public class func createButtonWith(frame: CGRect, title: String?, titleColor: UIColor?, titleSelected: String?,titleColorSelected: UIColor?, imageName: String?, imageNameSelected: String?, font: UIFont!, target: Any?, action: Selector? ,tag: Int = 0) -> UIButton{
 
         let button = UIButton(frame: frame)
         button.setTitle(title, for: .normal)
@@ -80,7 +80,7 @@ public class xbUIViewUtils: NSObject {
     }
     
     /** 创建UIImageView*/
-    class func createImageViewWith(frame: CGRect, backgroundColor: UIColor, cornerRadius: CGFloat, contentMode: UIView.ContentMode) -> UIImageView {
+    public class func createImageViewWith(frame: CGRect, backgroundColor: UIColor, cornerRadius: CGFloat, contentMode: UIView.ContentMode = .scaleToFill) -> UIImageView {
         
         let imageView = UIImageView(frame: frame)
         imageView.backgroundColor = backgroundColor
@@ -99,7 +99,7 @@ public class xbUIViewUtils: NSObject {
     
     
     /** 创建UITextField*/
-    class func createTextFildWith(frame: CGRect, text: String?, placeholder: String?, textColor: UIColor?, textAlignment: NSTextAlignment, font: UIFont?, borderStyle: UITextField.BorderStyle, keyboardType: UIKeyboardType, tintColor: UIColor) -> UITextField{
+    public class func createTextFildWith(frame: CGRect, text: String?, placeholder: String?, textColor: UIColor?, textAlignment: NSTextAlignment, font: UIFont?, borderStyle: UITextField.BorderStyle, keyboardType: UIKeyboardType, tintColor: UIColor) -> UITextField{
         
         let textFiled = UITextField(frame: frame)
         textFiled.text = text
@@ -114,7 +114,7 @@ public class xbUIViewUtils: NSObject {
         return textFiled
     }
     
-    class func createTextViewWith(frame: CGRect, text: String?, textColor: UIColor?, textAlignment: NSTextAlignment, font: UIFont?, isEditable: Bool) -> UITextView {
+    public class func createTextViewWith(frame: CGRect, text: String?, textColor: UIColor?, textAlignment: NSTextAlignment, font: UIFont?, isEditable: Bool) -> UITextView {
         let textView = UITextView(frame: frame)
         textView.text = text
         textView.textColor = textColor

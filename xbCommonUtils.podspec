@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 
   
   spec.name         = "xbCommonUtils"
-  spec.version      = "0.0.4"
+  spec.version      = "0.0.5"
   spec.summary      = "xbCommonUtils."
   spec.description  = "常用宏定义，UIView快速创建"
   
